@@ -12,9 +12,11 @@
   "app": {
     "windows": [
       {
-        "title": "butler",
-        "width": 800,
-        "height": 600
+        "title": "Butler",
+        "width": 1000,
+        "height": 700,
+        "resizable": true,
+        "decorations": true
       }
     ],
     "security": {
@@ -30,6 +32,10 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "externalBin": [
+      "binaries/idevice_id",
+      "binaries/ideviceinfo"
     ]
   }
 }

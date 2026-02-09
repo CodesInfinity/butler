@@ -1,20 +1,22 @@
-export interface MobileFile {
-  id: string;
+export interface DeviceResponse {
+  connected: boolean;
+  device_id: string | null;
+  name: string | null;
+  storage_total: number | null;
+  storage_free: number | null;
+  message: string;
+}
+
+export interface PhotoFile {
   name: string;
-  size_mb: number;
-  type: "image" | "video";
-  preview_url: string;
+  size: number;
+  type: string;
+  date: number;
+  id: number;
 }
 
-export interface DeviceStorage {
-  total_space: number; // en GB
-  used_space: number;  // en GB
-  photos_count: number;
-  videos_count: number;
-}
-
-export interface DeviceData {
-  device_name: string;
-  storage: DeviceStorage;
-  files: MobileFile[];
+export interface GalleryResponse {
+  success: boolean;
+  files: PhotoFile[] | null;
+  error: string | null;
 }

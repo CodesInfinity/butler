@@ -5,6 +5,36 @@
   "windows": ["main"],
   "permissions": [
     "core:default",
-    "opener:default"
+    "shell:allow-execute",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/idevice_id",
+          "args": ["-l"],
+          "sidecar": true
+        },
+        {
+          "name": "binaries/ideviceinfo",
+          "args": ["-k", "UniqueDeviceID"],
+          "sidecar": true
+        },
+        {
+          "name": "binaries/ideviceinfo",
+          "args": ["-k", "DeviceName"],
+          "sidecar": true
+        },
+        {
+          "name": "binaries/ideviceinfo",
+          "args": ["-k", "TotalDiskCapacity"],
+          "sidecar": true
+        },
+        {
+          "name": "binaries/ideviceinfo",
+          "args": ["-k", "TotalDataAvailable"],
+          "sidecar": true
+        }
+      ]
+    }
   ]
 }
