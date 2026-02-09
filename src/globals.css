@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    
+    color-scheme: light dark;
+    color: rgb(15, 23, 42); /* slate-900 */
+    background-color: rgb(248, 250, 252); /* slate-50 */
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color: rgb(248, 250, 252); /* slate-50 */
+      background-color: rgb(15, 23, 42); /* slate-900 */
+    }
+  }
+}
+
+@layer components {
+  /* Componentes personalizados pueden ir aquí */
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-slate-200 text-slate-800 px-4 py-2 rounded-lg font-medium hover:bg-slate-300 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700;
+  }
+}
